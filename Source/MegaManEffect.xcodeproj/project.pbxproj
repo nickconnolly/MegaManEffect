@@ -25,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		429515CF2B7E712E00A47518 /* MegaManEffectRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MegaManEffectRelease.entitlements; sourceTree = "<group>"; };
 		588979EC187E45D000EBF40D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		58E45300187E09C900ECEAD3 /* MegaManEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegaManEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E45303187E09C900ECEAD3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -68,6 +69,7 @@
 		58E452F7187E09C900ECEAD3 = {
 			isa = PBXGroup;
 			children = (
+				429515CF2B7E712E00A47518 /* MegaManEffectRelease.entitlements */,
 				58E45343187E100000ECEAD3 /* UKBorderlessWindow.h */,
 				58E45344187E100000ECEAD3 /* UKBorderlessWindow.m */,
 				58E45315187E09C900ECEAD3 /* MainAppDelegate.h */,
@@ -161,6 +163,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -301,6 +304,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MegaManEffect-Prefix.pch";
 				INFOPLIST_FILE = "MegaManEffect-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -310,11 +314,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MegaManEffectRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2G42DZ4F78;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MegaManEffect-Prefix.pch";
 				INFOPLIST_FILE = "MegaManEffect-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nickconnolly.MegaManEffect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
